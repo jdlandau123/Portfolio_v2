@@ -1,15 +1,303 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import { ContactForm } from '../components/ContactForm.jsx';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<main>
+		<section class="container-fluid align-items-center vh-100">
+			<div class="d-flex justify-content-end gap-5">
+				<a href="https://github.com/jdlandau123" target="_blank">
+					<img class="icon grow" src="icons/github-white.png" alt="GitHub" />
+				</a>
+				<a href="https://linkedin.com/in/joshuadlandau" target="_blank">
+					<img class="icon grow" src="icons/linkedin-64.png" alt="LinkedIn" />
+				</a>
+			</div>
+			<div id="hero-panel" class="d-flex justify-content-around align-items-center h-75">
+				<div>
+					<h1>Joshua Landau</h1>
+					<h3>Software Developer</h3>
+				</div>
+				<img id="profile-picture" class="img-fluid shadow-sm" src="profile-picture-min.png" alt="profile picture" />
+			</div>
+			<div class="text-center">
+				<p class="text-white">My work</p>
+				<i class="down-arrow text-white"></i>
+			</div>
+		</section>
+		<section class="container-fluid pt-4 text-center">
+			<h3>Projects</h3>
+			<div class="card-group column-gap-3">
+				<div class="card rounded-3 shadow">
+					<a href="https://fastgis.agnet.tamu.edu/alpha/" target="_blank">
+						<img src="tam-screenshot-min.png" class="card-img-top rounded-3" alt="texas a&m flowpath generation tool">
+					</a>
+					<div class="card-body">
+						<a href="https://fastgis.agnet.tamu.edu/alpha/" target="_blank" class="text-decoration-none text-black">
+							<h5 class="card-title">Texas A&M Flowpath Generation Tool</h5>
+						</a>
+						<p class="card-text">
+							A web app that generates a raster dataset to determine which areas within the selected area of interest are at
+							the highest risk of flooding
+						</p>
+						<div class="d-flex flex-wrap justify-start">
+							<div class="chip shadow-sm">ArcGIS Javascript API</div>
+							<div class="chip shadow-sm">HTML</div>
+							<div class="chip shadow-sm">CSS</div>
+							<div class="chip shadow-sm">Javascript</div>
+						</div>
+					</div>
+				</div>
+				<div class="card rounded-3 shadow">
+					<img src="smartintro-new-screenshot-min.jpg" class="card-img-top rounded-3" alt="smartintro">
+					<div class="card-body">
+						<h5 class="card-title">SmartIntro</h5>
+						<p class="card-text">
+							An AI-powered application that uses LinkedIn profile data to generate highly customized
+							cold outreach icebreaker sentences
+						</p>
+						<div class="d-flex flex-wrap justify-start">
+							<div class="chip shadow-sm">React</div>
+							<div class="chip shadow-sm">Django REST Framework</div>
+							<div class="chip shadow-sm">Docker</div>
+							<div class="chip shadow-sm">Celery</div>
+							<div class="chip shadow-sm">AWS</div>
+						</div>
+					</div>
+				</div>
+				<div class="card rounded-3 shadow">
+					<img src="snoqualmie-forms-min.png" class="card-img-top rounded-3" alt="snoqualmie member portal">
+					<div class="card-body">
+						<h5 class="card-title">Snoqualmie Member Portal</h5>
+						<p class="card-text">
+							A member portal website that the Snoqualmie Indian Tribe uses to track and facilitate programs and
+							benefits for its members.
+						</p>
+						<div class="d-flex flex-wrap justify-start">
+							<div class="chip shadow-sm">Django</div>
+							<div class="chip shadow-sm">Docker</div>
+							<div class="chip shadow-sm">Bootstrap</div>
+							<div class="chip shadow-sm">Wagtail</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid pt-4 text-center mt-5">
+			<h3>Experience</h3>
+			<div class="d-flex flex-column justify-content-center align-items-center">
+				<div class="card w-50 mt-3 shadow responsiveCard">
+					<h5 class="card-header text-start">Lead Back-End Engineer - <i>Freelance</i></h5>
+					<div class="card-body text-start">
+						<p class="card-text d-flex justify-content-between companyInfo">
+							<span>SmartIntro</span>
+							<span>March 2023 - Current</span>
+						</p>
+						<p class="card-text">
+							As lead back-end engineer I have been able to design and implement this
+							application's architecture and back-end services from the ground up. This has included
+							developing a Django REST API, implementing scalable and asynchronous background
+							processing with Celery, and employing Docker to containerize and deploy the
+							application via an Nginx web server. I also contributed to the application's 
+							user interface, which is built with React using Material UI.
+						</p>
+						<i class="mt-3">
+							This application is currently in alpha being prepared for its first phase
+							of user testing. Links will be added as soon as possible.
+						</i>
+						<div class="d-flex flex-wrap justify-start mt-3">
+							<div class="chip shadow-sm">Django REST Framework</div>
+							<div class="chip shadow-sm">React</div>
+							<div class="chip shadow-sm">Docker</div>
+							<div class="chip shadow-sm">PostgreSQL</div>
+							<div class="chip shadow-sm">Celery</div>
+							<div class="chip shadow-sm">AWS</div>
+						</div>
+					</div>
+				</div>
+				<div class="card w-50 mt-3 shadow responsiveCard">
+					<h5 class="card-header text-start">GIS Developer</h5>
+					<div class="card-body text-start">
+						<p class="card-text d-flex justify-content-between companyInfo">
+							<span>Innovate Inc</span>
+							<span>April 2022 - Current</span>
+						</p>
+						<p class="card-text">
+							At Innovate I have been able to work on a wide range of interesting projects for
+							both private and government clients. Some of the tasks that I frequently work on
+							include developing new and existing REST API services using Django REST Framework, 
+							building complex user interfaces with Angular, and integrating geospatial datasets 
+							into our applications with ESRI's ArcGIS Enterprise tooling. 
+						</p>
+						<div class="d-flex flex-wrap justify-start">
+							<div class="chip shadow-sm">Django</div>
+							<div class="chip shadow-sm">Angular</div>
+							<div class="chip shadow-sm">React</div>
+							<div class="chip shadow-sm">Docker</div>
+							<div class="chip shadow-sm">ArcGIS Enterprise</div>
+							<div class="chip shadow-sm">SQL Server</div>
+							<div class="chip shadow-sm">PostgreSQL</div>
+						</div>
+					</div>
+				</div>
+				<div class="card w-50 mt-3 shadow responsiveCard">
+					<h5 class="card-header text-start">Environmental GIS Analyst</h5>
+					<div class="card-body text-start">
+						<p class="card-text d-flex justify-content-between companyInfo">
+							<span>Tehama LLC</span>
+							<span>October 2020 - April 2022</span>
+						</p>
+						<p class="card-text">
+							My GIS knowledge grew immensely during my time at Tehama. The core
+							responsibilities of this position involved interpreting, manipulating,
+							visualizing, and managing large geospatial datasets. The main tools I used
+							to accomplish these tasks included Python, SQL, and ArcGIS pro.
+						</p>
+					</div>
+				</div>
+				<div class="card w-50 mt-3 shadow responsiveCard">
+					<h5 class="card-header text-start">Geospatial Technician</h5>
+					<div class="card-body text-start">
+						<p class="card-text d-flex justify-content-between companyInfo">
+							<span>Quantum Spatial</span>
+							<span>August 2019 - September 2020</span>
+						</p>
+						<p class="card-text">
+							Being my first full-time position after graduting from Florida State University,
+							my time at Quantum Spatial was foundational to my professional development. In 
+							this position I was responsible for creating and maintaining many large 
+							geospatial datasets. I also had the opportunity to use my Python skills to develop
+							some custom automated workflows for data processing and formatting.
+						</p>
+					</div>
+				</div>
+				<a href="./Joshua_Landau_Resume.pdf" download="Joshua_Landau_Resume" target="_blank">
+					<button type="button" class="btn btn-light mt-3">Download Full Resume</button>
+				</a>
+			</div>
+		</section>
+		<section class="container-fluid pt-4 text-center mt-5">
+			<h3>Testimonial</h3>
+			<div class="d-flex justify-content-center">
+				<div class="card w-75 shadow responsiveCard">
+					<div class="card-body">
+						<blockquote class="blockquote mb-0">
+							<p class="text-start">
+								"Searching for a Python wizard who's as personable as he's proficient? Meet Joshua
+								turning coding crises into software victories with ease and efficiency. My SaaS project was on the
+								verge of becoming another unfinished tale when Joshua stepped in. Our front end developer left a lot
+								unfinished and a working prototype was nowhere to be found. Joshua, however, turned the tables around
+								swiftly and adeptly. His unparalleled skills and relentless determination transformed our precarious
+								situation into a stunning MVP in a flash. But Joshua's talents aren't restricted to coding. His friendly
+								nature and stellar communication skills make him an excellent team player. When looking for a
+								professional who seamlessly combines coding competence with a congenial demeanor, Joshua is the clear
+								choice."
+							</p>
+							<p class="blockquote-footer mt-3 text-end">
+								<cite title="Jordan Silvera, Founder of SmartIntro">Jordan Silvera, Founder of SmartIntro</cite>
+							</p>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container pt-4 text-center mt-5 d-flex flex-column align-items-center">
+			<h3>Contact Me</h3>
+			<ContactForm client:only />
+		</section>
+		<footer class="text-center mt-5 text-white"></footer>
+	</main>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 64pt;
+		font-weight: lighter;
+		color: white;
+	}
+
+	h3 {
+		font-size: 28pt;
+		font-weight: lighter;
+		color: white;
+	}
+
+	img#profile-picture {
+		height: 300px;
+		border: 1pt solid #74A06e;
+		border-radius: 50%;
+	}
+
+	.links {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		list-style: none;
+		gap: 20%;
+		padding: 0;
+	}
+
+	.icon {
+		width: 30px;
+		height: 30px;
+	}
+
+	.chip {
+		padding: 8px;
+		margin: 5px;
+		border: 1pt solid #74A06e;
+		background-color: #74A06e;
+		color: white;
+		border-radius: 20px;
+		width: fit-content;
+	}
+
+	.down-arrow {
+		border: solid white;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+	}
+
+	.companyInfo {
+		font-size: 14pt;
+	}
+
+	.grow { 
+		transition: all .2s ease-in-out; 
+	}
+
+	.grow:hover { 
+		transform: scale(1.1); 
+	}
+
+	@media only screen and (max-width: 600px) {
+		html, body {
+			padding: 10px;
+		}
+
+		h1 {
+			font-size: 48pt;
+		}
+
+		h3 {
+			font-size: 24pt;
+		}
+
+		img#profile-picture {
+			height: 200px;
+		}
+
+		div#hero-panel {
+			flex-direction: column;
+		}
+
+		.companyInfo {
+			flex-direction: column;
+		}
+	}
+</style>
