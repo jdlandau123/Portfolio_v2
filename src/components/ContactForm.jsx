@@ -46,20 +46,20 @@ export const ContactForm = () => {
     }
 
     return (
-        <form className="w-50 responsiveCard">
+        <form className="w-50 responsiveCard mt-3">
             <div className="mb-3">
-                <input id="nameInput" type="text" className="form-control" placeholder="Name"
+                <input id="nameInput" type="text" className="form-control shadow" placeholder="Name"
                     onChange={(e) => setName(e.target.value)} value={name} />
             </div>
             <div className="mb-3">
-                <input id="emailInput" type="email" className="form-control" placeholder="Email Address" required
+                <input id="emailInput" type="email" className="form-control shadow" placeholder="Email Address" required
                     onChange={(e) => setEmail(e.target.value)} value={email} />
             </div>
             <div className="mb-3">
-                <textarea id="messageInput" className="form-control" placeholder="Message" rows="3"
+                <textarea id="messageInput" className="form-control shadow" placeholder="Message" rows="3"
                     onChange={(e) => setMessage(e.target.value)} value={message}></textarea>
             </div>
-            <button type="button" className="btn btn-light" onClick={() => sendEmail()}
+            <button type="button" className="btn btn-light shadow" onClick={() => sendEmail()}
                 disabled={btnDisabled}>Submit</button>
 
             {emailError && email && email.length >= 12
