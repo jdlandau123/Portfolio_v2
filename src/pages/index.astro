@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { ContactForm } from '../components/ContactForm.jsx';
+const currentYear = new Date().getFullYear();
 ---
 
 <Layout>
@@ -206,7 +207,7 @@ import { ContactForm } from '../components/ContactForm.jsx';
 			<h3>Contact Me</h3>
 			<ContactForm client:only />
 		</section>
-		<footer class="text-center mt-5 text-white"></footer>
+		<footer class="text-center mt-5 text-white">&copy {currentYear} Joshua Landau</footer>
 	</main>
 </Layout>
 
